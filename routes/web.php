@@ -23,6 +23,6 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('users/index', [UsersController::class, 'index']);
+    Route::get('users/index', [UsersController::class, 'index'])->name('users.index');
 
 });
