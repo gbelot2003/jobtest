@@ -1,4 +1,4 @@
-[![cov](https://gbelot2003.github.io/jobtest/badges/coverage.svg)](https://github.com/gbelot2003/jobtest/actions)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/gbelot2003/jobtest/CI?label=build)
 
 # Jobtest for ConstelationX
 ## Technical Test
