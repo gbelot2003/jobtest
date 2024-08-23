@@ -14,8 +14,8 @@ acceder a una URL específica. Puedes usar endpoints públicos como:
     * Después de obtener los usuarios, crea una contraseña por defecto para
 ellos. Deberás implementar un sistema de login.</s>
 
-* Asignación de Roles:
-    * Separa a los usuarios en dos roles: Clientes y Administradores.
+* <s>Asignación de Roles:
+    * Separa a los usuarios en dos roles: Clientes y Administradores.</s>
 
 * CRUD de Productos:
     * Los administradores podrán crear, leer, actualizar y eliminar productos
