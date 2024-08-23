@@ -11,7 +11,7 @@
     ```
      git clone https://github.com/gbelot2003/jobtest.git
     ```
-- Para mayor comodidad usaremos docker [laravel Sails](https://laravel.com/docs/11.x/sail), asi que deberemos asegurarnos que tenemos [docker](https://www.docker.com) y [docker compose](https://docs.docker.com/compose/install/) instalados. luego ejecutaremos el siguiente comando como indican el link con las instruccione [Instrucciones](https://laravel.com/docs/11.x/sail#installing-composer-dependencies-for-existing-projects) :
+- Para mayor comodidad usaremos docker [laravel Sails](https://laravel.com/docs/11.x/sail), asi que deberemos asegurarnos que tenemos [docker](https://www.docker.com) y [docker compose](https://docs.docker.com/compose/install/) instalados. luego ejecutaremos el siguiente comando como indican el link con las [instrucciones](https://laravel.com/docs/11.x/sail#installing-composer-dependencies-for-existing-projects) :
     ```
     docker run --rm \
     -u "$(id -u):$(id -g)" \
