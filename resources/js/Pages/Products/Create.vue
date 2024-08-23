@@ -60,7 +60,7 @@ let submit = () => {
                                         <label for="nombre">Precio</label>
                                         <input v-model="form.price" id="nombre"
                                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full"
-                                            :class="{ 'border-red-500': form.errors.price }" type="text">
+                                            :class="{ 'border-red-500': form.errors.price }" type="number">
                                         <div class="text-red-600" v-if="form.errors.price">{{ form.errors.price }}</div>
                                     </div>
 
