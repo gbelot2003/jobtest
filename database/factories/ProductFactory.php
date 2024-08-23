@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Produc>
  */
-class ProducFactory extends Factory
+class ProductFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,11 @@ class ProducFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->title,
+            'price' => fake()->paragraph,
+            'description' => fake()->paragraph,
+            'category' => fake()->word,
+            'image' => fake()->imageUrl($width = 200, $height = 200),
         ];
     }
 }

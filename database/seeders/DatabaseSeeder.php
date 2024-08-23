@@ -17,6 +17,14 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UsersTableSeeder::class);
 
+        $this->setRoles();
+
+        $this->call(ProductsTableSeeder::class);
+
+    }
+
+    private function setRoles()
+    {
         $admin = User::where('email', 'admin@tester.com')->first();
         $admin->assignRole('administrador');
 
