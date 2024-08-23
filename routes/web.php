@@ -24,8 +24,8 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::get('users/', [UsersController::class, 'index'])->name('users.index');
+    Route::get('admin/users/', [UsersController::class, 'index'])->name('users.index');
 
-    Route::get('products', [ProductsController::class, 'index'])->name('pdoructs.index');
+    Route::get('admin/products', [ProductsController::class, 'index'])->name('products.index');
 
 });

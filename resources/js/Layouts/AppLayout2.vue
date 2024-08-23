@@ -172,8 +172,8 @@ const logout = () => {
                 :class="showingNavigation ? '-translate-x-full' : ''">
                 <nav>
                     <MenuItem name="Dashboard" icon="mdi-home" href="/dashboard" :active="route().current('dashboard')" />
-                    <MenuItem v-if="$page.props.user_role === 'administrador'"  name="Productos" icon="mdi-account-box-multiple-outline" href="/products" :active="route().current('products.index')" />
-                    <MenuItem v-if="$page.props.user_role === 'administrador'" name="Usuarios" icon="mdi-account-group" href="/users" :active="route().current('users.index')" />
+                    <MenuItem v-if="$page.props.user_role === 'administrador'"  name="Productos" icon="mdi-account-box-multiple-outline" href="/admin/products" :active="route().current('products.index')" />
+                    <MenuItem v-if="$page.props.user_role === 'administrador'" name="Usuarios" icon="mdi-account-group" href="/admin/users" :active="route().current('users.index')" />
 
                 </nav>
         </aside>

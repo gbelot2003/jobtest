@@ -20,7 +20,7 @@ class ProductsController extends Controller
     public function index()
     {
         return Inertia::render('Products/Index', [
-            'users' => $this->services->Products(Request::input('search')),
+            'products' => $this->services->Products(Request::input('search')),
             'filters' => Request::only(['search'])
         ]);
     }
