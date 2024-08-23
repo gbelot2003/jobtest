@@ -58,8 +58,25 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function update()
+    public function update($id, RequestData $request)
     {
+        $product = Product::findOrFail($id);
 
+        $request->validate([
+            'title' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+            'image' => 'required'
+        ]);
+
+        $product->update($request->all());
+        return to_route('products.index');
+    }
+
+    public function destroy($id)
+    {
+        Product::where('id', $id)->delete();
+        return to_route('products.index');
     }
 }

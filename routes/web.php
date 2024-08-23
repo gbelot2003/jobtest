@@ -30,4 +30,5 @@ Route::middleware([
     Route::get('admin/products/create', [ProductsController::class, 'create'])->name('products.create');
     Route::post('admin/products', [ProductsController::class, 'store'])->name('products.store');
     Route::get('admin/products/{id}/edit', [ProductsController::class, 'edit'])->name('products.edit');
+    Route::post('admin/products/destroy/{id}', [ProductsController::class, 'destroy'])->name('products.detroy');
 });

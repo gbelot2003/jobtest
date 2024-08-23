@@ -19,7 +19,13 @@ let form = useForm({
 });
 
 let submit = () => {
-    form.post('/products/' + props.product.id);
+    form.post('/admin/products/' + props.product.id);
+}
+
+let destroy = ()  => {
+    if(confirm("Se dispone a eliminar este registro permanenetemente") == true) {
+        form.post(`/admin/products/destroy/${props.product.id}`)
+    }
 }
 
 </script>

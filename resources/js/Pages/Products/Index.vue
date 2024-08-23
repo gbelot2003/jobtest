@@ -54,10 +54,6 @@ watch(search, value => {
                                     class="bg-blue-700 hover:bg-blue-400 px-3 py-2 mr-2 rounded-lg text-white hover:underline">
                                 Edit
                                 </Link>
-                                <Link :href="`/admin/products/${product.id}`"
-                                    class="bg-red-800 hover:bg-blue-400 px-3 py-2 rounded-lg text-white hover:underline">
-                                Delete
-                                </Link>
                             </td>
                         </tr>
                     </tbody>
