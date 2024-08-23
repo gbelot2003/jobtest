@@ -28,7 +28,8 @@ watch(search, value => {
         <div class="container">
             <h1 class="text-lg mb-10">Administración de Productos</h1>
             <div class="md:flex md:justify-between mb-2">
-                    <a href="#"></a>
+                <Link href="/admin/products/create" class="leading-tight py-3 px-2 text-white rounded-full text-center bg-blue-950">
+                    + Nuevo <span class="mdi mdi-plus-circle-outline"></span></Link>
 
                     <input type="text" class="rounded w-full md:w-1/2" v-model="search" placeholder="Buscar...." />
             </div>
@@ -38,19 +39,26 @@ watch(search, value => {
                         <tr class="bg-blue-400 flex flex-col flex-nowrap sm:table-row rounded-l-lg sm:rounded-none mb-2 sm:mb-0"
                             v-for="product in products.data" :key="product.id">
                             <th class="p-4 text-left">ID</th>
-                            <th class="p-3 text-left">Image</th>
-                            <th class="p-3 text-left">Title</th>
-                            <th class="p-3 text-left">Description</th>
-                            <th class="p-3 text-left">Price</th>
+                            <th class="p-3 text-left">Nombre</th>
+                            <th class="p-3 text-left">Precio</th>
+                            <th class="p-3 text-left">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="flex flex-col flex-nowrap sm:table-row mb-2 sm:mb-0" v-for="product in products.data" :key="product.id">
                             <td class="border-grey-light md:border hover:bg-gray-100 p-4">{{ product.id }}</td>
-                            <td class="border-grey-light md:border hover:bg-gray-100 p-3"><img :src="product.image" alt="Italian Trulli" /></td>
                             <td class="border-grey-light md:border hover:bg-gray-100 p-3">{{ product.title }}</td>
-                            <td class="border-grey-light md:border hover:bg-gray-100 p-3">{{ product.description }}</td>
                             <td class="border-grey-light md:border hover:bg-gray-100 p-3">$.{{ product.price }}.00</td>
+                            <td class="border-grey-light md:border hover:bg-gray-100 p-3">
+                                <Link :href="`/admin/products/${product.id}/edit`"
+                                    class="bg-blue-700 hover:bg-blue-400 px-3 py-2 mr-2 rounded-lg text-white hover:underline">
+                                Edit
+                                </Link>
+                                <Link :href="`/admin/products/${product.id}`"
+                                    class="bg-red-800 hover:bg-blue-400 px-3 py-2 rounded-lg text-white hover:underline">
+                                Delete
+                                </Link>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

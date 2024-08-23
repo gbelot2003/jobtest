@@ -27,5 +27,6 @@ Route::middleware([
     Route::get('admin/users/', [UsersController::class, 'index'])->name('users.index');
 
     Route::get('admin/products', [ProductsController::class, 'index'])->name('products.index');
-
+    Route::get('admin/products/create', [ProductsController::class, 'create'])->name('products.create');
+    Route::get('admin/products/{id}/edit', [ProductsController::class, 'create'])->name('products.edit');
 });
