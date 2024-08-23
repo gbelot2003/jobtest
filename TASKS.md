@@ -1,8 +1,8 @@
 ### Instrucciones para la Prueba Técnica
 
-* Crear una Aplicación en Laravel:
-    * Crea una aplicación utilizando la versión de Laravel de tu preferencia
-(recomendamos usar las últimas versiones).
+* <s>Crear una Aplicación en Laravel:</s>
+    * <s>Crea una aplicación utilizando la versión de Laravel de tu preferencia
+(recomendamos usar las últimas versiones).</s>
 
 * Consumo de una API para Creación de Usuarios:
     * Consume una API para crear usuarios y guardarlos en la base de datos al
