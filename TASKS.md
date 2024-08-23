@@ -18,8 +18,8 @@ ellos. Deberás implementar un sistema de login.</s>
     * Separa a los usuarios en dos roles: Clientes y Administradores.</s>
 
 * CRUD de Productos:
-    * Los administradores podrán crear, leer, actualizar y eliminar productos
-(CRUD completo).
+    * <s>Los administradores podrán crear, leer, actualizar y eliminar productos
+(CRUD completo)</s>.
     * Los clientes podrán ver los productos en un catálogo público, que para
 comprar tendran que iniciar sesion o crearse una cuenta.
 
