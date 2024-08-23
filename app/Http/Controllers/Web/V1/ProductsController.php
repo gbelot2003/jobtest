@@ -33,6 +33,22 @@ class ProductsController extends Controller
     }
 
 
+    public function store(RequestData $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'category' => 'required',
+            'image' => 'required'
+        ]);
+
+        $this->services->ProductsCreate($request);
+
+        return to_route('products.index');
+    }
+
+
     public function edit(Product $product)
     {
         return Inertia::render('Products/Edit', [

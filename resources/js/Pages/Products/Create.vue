@@ -13,7 +13,7 @@ let form = useForm({
 });
 
 let submit = () => {
-    form.post("/products");
+    form.post("/admin/products");
 }
 
 </script>
@@ -49,9 +49,9 @@ let submit = () => {
 
                                     <div class="col-span-6 sm:col-span-4">
                                         <label for="nombre">descripción</label>
-                                        <input v-model="form.description" id="nombre"
+                                        <textarea v-model="form.description" id="nombre"
                                             class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full"
-                                            :class="{ 'border-red-500': form.errors.description }" type="text">
+                                            :class="{ 'border-red-500': form.errors.description }" type="text" />
                                         <div class="text-red-600" v-if="form.errors.description">{{
                                             form.errors.description }}</div>
                                     </div>

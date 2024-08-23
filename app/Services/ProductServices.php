@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Product;
+use Illuminate\Http\Request;
 
 class ProductServices
 {
@@ -19,4 +20,12 @@ class ProductServices
 
         return $products;
     }
+
+
+    public function ProductsCreate(Request $request)
+    {
+        $product = Product::create($request->all());
+        return $product;
+    }
+
 }
