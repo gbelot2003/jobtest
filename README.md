@@ -29,6 +29,8 @@
 - PHP/Laravel
     - [Jetsteam](https://jetstream.laravel.com/introduction.html)
     - [Inertia](https://jetstream.laravel.com/stacks/inertia.html)
+    - [laravel/iseed](https://github.com/orangehill/iseed)
+    - [laravel/debug-bar](https://github.com/barryvdh/laravel-debugbar)
 - NodeJs
     - "@inertiajs/vue3": "^1.0.14",
     - "@tailwindcss/forms": "^0.5.7",
