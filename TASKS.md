@@ -4,14 +4,15 @@
     * <s>Crea una aplicación utilizando la versión de Laravel de tu preferencia
 (recomendamos usar las últimas versiones).</s>
 
-* Consumo de una API para Creación de Usuarios:
-    * Consume una API para crear usuarios y guardarlos en la base de datos al
+* <s>Consumo de una API para Creación de Usuarios:</s>
+    * <s>Consume una API para crear usuarios y guardarlos en la base de datos al
 acceder a una URL específica. Puedes usar endpoints públicos como:
         * reqres.in
-        * {JSON}Placeholder
-* Gestión de Contraseñas y Login:
+        * {JSON}Placeholder</s>
+
+* <s>Gestión de Contraseñas y Login:
     * Después de obtener los usuarios, crea una contraseña por defecto para
-ellos. Deberás implementar un sistema de login.
+ellos. Deberás implementar un sistema de login.</s>
 
 * Asignación de Roles:
     * Separa a los usuarios en dos roles: Clientes y Administradores.
