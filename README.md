@@ -27,4 +27,17 @@
     ```
 ### Detalle de paquetes instalados.
 - PHP/Laravel
+    - [Jetsteam](https://jetstream.laravel.com/introduction.html)
+    - [Inertia](https://jetstream.laravel.com/stacks/inertia.html)
 - NodeJs
+    - "@inertiajs/vue3": "^1.0.14",
+    - "@tailwindcss/forms": "^0.5.7",
+    - "@tailwindcss/typography": "^0.5.10",
+    - "@vitejs/plugin-vue": "^5.0.0",
+    - "autoprefixer": "^10.4.16",
+    - "axios": "^1.6.4",
+    - "laravel-vite-plugin": "^1.0",
+    - "postcss": "^8.4.32",
+    - "tailwindcss": "^3.4.0",
+    - "vite": "^5.0",
+    - "vue": "^3.3.13"
