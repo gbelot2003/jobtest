@@ -6,11 +6,13 @@ import DropdownLink from '@/Components/DropdownLink.vue';
 import MenuItem from '@/Components2/MenuItem.vue';
 defineProps({
     title: String,
+    user_role: String
 });
 const showingNavigation = ref(true);
 const logout = () => {
     router.post(route('logout'));
 };
+
 </script>
 
 <template>
@@ -39,7 +41,7 @@ const logout = () => {
                                 <span class="inline-flex rounded-md">
                                     <button type="button"
                                         class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
-                                        {{ $page.props.auth.user.current_team.name }}
+                                        {{ $page.props.auth.user.name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none"
                                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -169,15 +171,15 @@ const logout = () => {
                 :class="showingNavigation ? '-translate-x-full' : ''">
                 <nav>
                     <MenuItem name="Dashboard" icon="mdi-home" href="/dashboard" :active="route().current('dashboard')" />
-                    <MenuItem name="Productos" icon="mdi-account-box-multiple-outline" href="/products" :active="route().current('products.index')" />
-                    <MenuItem name="Usuarios" icon="mdi-account-group" href="/users" :active="route().current('users.index')" />
-
+                    <MenuItem  name="Productos" icon="mdi-account-box-multiple-outline" href="/products" :active="route().current('products.index')" />
+                    <MenuItem v-if="$page.props.auth.user.name === 'Administrador'"  name="Usuarios" icon="mdi-account-group" href="/users" :active="route().current('users.index')" />
 
                 </nav>
         </aside>
 
         <main class=" flex-1 p-10 text-base">
             <slot />
+
         </main>
     </div>
 </div></template>

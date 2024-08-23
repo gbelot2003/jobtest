@@ -8,6 +8,22 @@ use Illuminate\Support\Facades\Http;
 
 class UserServices
 {
+
+    public function Users($request)
+    {
+        $users = User::query()
+        ->with('roles')
+        ->when($request, function ($query, $search){
+            $query->where('name', 'LIKE', "%{$search}%");
+            $query->OrWhere('email', 'LIKE', "%{$search}%");
+        })
+        ->orderBy('id', 'DESC')
+        ->paginate(10)
+        ->withQueryString();
+
+        return $users;
+    }
+
     public function imporUsers()
     {
         $respone = Http::get(env("API_USERS_IMPORT"));
