@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 import Dropdown from '@/Components/Dropdown.vue';
 import DropdownLink from '@/Components/DropdownLink.vue';
@@ -9,6 +9,7 @@ defineProps({
     user_role: String
 });
 const showingNavigation = ref(true);
+
 const logout = () => {
     router.post(route('logout'));
 };
@@ -171,13 +172,14 @@ const logout = () => {
                 :class="showingNavigation ? '-translate-x-full' : ''">
                 <nav>
                     <MenuItem name="Dashboard" icon="mdi-home" href="/dashboard" :active="route().current('dashboard')" />
-                    <MenuItem  name="Productos" icon="mdi-account-box-multiple-outline" href="/products" :active="route().current('products.index')" />
-                    <MenuItem v-if="$page.props.auth.user.name === 'Administrador'"  name="Usuarios" icon="mdi-account-group" href="/users" :active="route().current('users.index')" />
+                    <MenuItem v-if="$page.props.user_role === 'administrador'"  name="Productos" icon="mdi-account-box-multiple-outline" href="/products" :active="route().current('products.index')" />
+                    <MenuItem v-if="$page.props.user_role === 'administrador'" name="Usuarios" icon="mdi-account-group" href="/users" :active="route().current('users.index')" />
 
                 </nav>
         </aside>
 
         <main class=" flex-1 p-10 text-base">
+
             <slot />
 
         </main>
