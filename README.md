@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/laravel.yml/badge.svg)
+[![cov](https://gbelot2003.github.io/jobtest/badges/coverage.svg)](https://github.com/gbelot2003/jobtest/actions)
 
 # Jobtest for ConstelationX
 ## Technical Test
