@@ -19,7 +19,7 @@ let form = useForm({
 });
 
 let submit = () => {
-    form.post('/admin/products/' + props.product.id);
+    form.patch('/admin/products/' + props.product.id);
 }
 
 let destroy = ()  => {

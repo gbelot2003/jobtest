@@ -15,7 +15,7 @@ class ProductServices
             $query->where('title', 'LIKE', "%{$search}%");
         })
         ->orderBy('id', 'DESC')
-        ->paginate(10)
+        ->paginate(8)
         ->withQueryString();
 
         return $products;
